@@ -1,0 +1,85 @@
+.produto{
+    display: grid;
+    /*grid-template-columns: 1fr 1.5fr;*/
+    grid-template-columns: 1fr 1.2fr;
+    gap: 32px;
+    padding: 32px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+main {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: rgb(221, 221, 221);
+}
+
+main img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.produto-detalhes{
+    display: flex;
+    flex-direction: column;
+}
+
+.produto-detalhes h1{
+    font-weight: normal;
+}
+
+.produto-detalhes .preco{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.produto-frete{
+    margin-top: 26px;
+}
+
+.produto-detalhes a{
+    border-radius: 6px;
+    align-self: flex-start;
+}
+
+.produto-frete input{
+    max-width: 200px;
+}
+
+#btn-comprar{
+    background-color: rgb(7, 109, 75);
+    color: white;
+    padding: 12px 16px;
+    margin-top: 26px;
+}
+
+#btn-frete{
+    background-color: rgb(49, 49, 49);
+    color: white;
+    padding: 5px 8px;
+    border-radius: 2px;
+    margin-left: 4px;
+}
+
+.produto-detalhes input{
+    padding: 6px 12px;
+    border: none;
+    background-color: rgb(247, 247, 247);
+    font-size: 16px;
+}
+
+.produto-frete span{
+    display: block;
+}
+
+@media screen and (max-width: 900px){
+    .produto{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .produto{
+        grid-template-columns: 1fr;
+    }
+}

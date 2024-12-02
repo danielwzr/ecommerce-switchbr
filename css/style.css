@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+  outline: 0px solid red;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+main {
+  min-height: calc(100vh - 230px);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+header a {
+  color: var(--text-primary-color);
+}
+
+form {
+  overflow: hidden;
+  background-color: rgb(247, 247, 247);
+  border-radius: 3px;
+}
+
+#input-busca {
+  padding: 6px 12px;
+  border: none;
+  background-color: rgb(247, 247, 247);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+button {
+  cursor: pointer;
+  padding: 6px 12px;
+  border: none;
+  background-color: inherit;
+}
+
+input::placeholder {
+  color: rgb(182, 182, 182);
+  opacity: 1; /* Firefox */
+}
+
+/* HEADER */
+header {
+  background-color: var(--secondary-color);
+  color: var(--text-primary-color);
+}
+
+.upper-header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.upper-header ul,
+.lower-header ul {
+  display: flex;
+  gap: 40px;
+}
+
+.lower-header-bg,
+.footer-bg {
+  background-color: var(--primary-color);
+}
+
+.lower-header {
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.menu-icon img {
+  max-width: 40px;
+}
+
+.menu-icon {
+  position: relative;
+}
+
+#qtd-carrinho {
+  position: absolute;
+  background-color: green;
+  width: 22px;
+  right: -10px;
+  text-align: center;
+  border-radius: 100%;
+}
+
+.logo {
+  max-width: 100px;
+}
+
+/* main */
+main {
+  background-color: var(--background-color);
+}
+
+.switches {
+  background: url("/img/banner2.png");
+}
+
+.acessorios {
+  background: url("/img/banner1.jpg");
+}
+
+.banner {
+  min-height: 200px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+}
+
+.switches::after {
+  content: "SWITCHES OUTEMU";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0, 0.4);
+  color: rgb(235, 235, 235);
+  text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-size: 86px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.acessorios::after {
+  content: "ACESSÓRIOS";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0, 0.4);
+  color: rgb(235, 235, 235);
+  text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-size: 86px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.produtos-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px 0px;
+}
+
+.produto-item {
+  overflow: hidden;
+  text-align: center;
+  max-width: 250px;
+}
+
+.produto-item:hover img,
+.banner:hover {
+  opacity: 0.85;
+}
+
+.produto-item:hover .btn-add-carrinho {
+  display: inline;
+}
+
+.produto-item span {
+  color: rgb(8, 36, 192);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.produto-item p {
+  color: var(--text-contrast-color);
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+.btn-add-carrinho {
+  color: var(--text-primary-color);
+  background-color: rgb(18, 158, 100);
+  padding: 2px 16px;
+  border-radius: 6px;
+  display: none;
+}
+
+/* FOOTER */
+.footer-wrapper {
+  padding: 32px 24px;
+  color: var(--text-primary-color);
+  text-align: flex-start;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-wrapper ul {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-wrapper a {
+  color: var(--text-secondary-color);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+  .lower-header-bg {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .produtos-lista {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form-busca {
+    display: none;
+  }
+  .footer-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 32px;
+  }
+}

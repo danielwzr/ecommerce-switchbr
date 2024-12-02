@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Brasil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;700&family=Roboto:wght@300;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="css/colors.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/carrinho.css">
+</head>
+
+<body>
+    <header>
+        <div class="upper-header container">
+            <a href="index.html">
+                <img src="img/logo.png" alt="Switch Brasil" class="logo">
+            </a>
+            <form action="busca/" method="get" class="form-busca">
+                <input type="text" placeholder="O que você procura?" id="input-busca">
+                <button type="submit">🔍</button>
+            </form>
+            <nav>
+                <ul class="menu">
+                    <!--    <li class="menu-icon">
+                        <a href="#"><img src="img/icons/profile.svg" alt="Perfil"></a>
+                    </li>  -->
+                    <li class="menu-icon">
+                        <a href="carrinho.html">
+                            <span id="qtd-carrinho"></span>
+                            <img src="img/icons/carrinho.svg" alt="Carrinho">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="lower-header-bg">
+            <div class="lower-header container">
+                <nav>
+                    <ul>
+                        <li><a href="#">Todos os produtos</a></li>
+                        <li><a href="#">Switches</a></li>
+                        <li><a href="#">Keycaps</a></li>
+                        <li><a href="#">Removedores</a></li>
+                        <li><a href="#">Acessórios</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="carrinho container">
+            <div>
+                <h2>Meu carrinho</h2>
+                <ul class="carrinho-lista" id="carrinho-lista">
+
+                </ul>
+            </div>
+            <div class="carrinho-resumo">
+                <h2>Resumo</h2>
+                <div>
+                    <span id="subtotal"></span>
+                    <span>Frete <span id="frete"></span> <br> Rua Major Gote, Patos de Minas - MG <br> 38702-090</span>
+                </div>
+                <h2>Total</h2>
+                <h3 id="total"></h3>
+                <a href="#" id="fazer-pedido">FINALIZAR COMPRA PELO WHATSAPP</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-bg">
+        <div class="footer-wrapper container">
+            <div class="marketplaces">
+                <h3>Marketplaces</h3>
+                <ul>
+                    <li><a target="_blank"
+                            href="https://shopee.com.br/switchbrasil?categoryId=100644&entryPoint=ShopByPDP&itemId=10114552258">Shopee</a>
+                    </li>
+                    <li><a target="_blank" href="https://lista.mercadolivre.com.br/_CustId_176759073">Mercado Livre</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contato">
+                <h3>Contato</h3>
+                <ul>
+                    <li><a href="#">+55 34 99999-9999</a></li>
+                    <li><a href="#">switchbrasil@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="informacoes">
+                <h3>Informações</h3>
+                <ul>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Política de Devolução</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src=retrieveProdutos.js></script>
+    <script src="carrinho.js"></script>
+</body>
+
+</html>
